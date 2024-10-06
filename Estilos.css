@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(/imagens/fundo.jpeg);
+    background-image: url(/imagens/fundo.jpg);
     background-size: cover; /* Para cobrir toda a tela, ajuste conforme necessário */
     background-repeat: repeat; /* Para repetir a imagem */
     background-position: center; /* Centraliza a imagem */
