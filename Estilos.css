@@ -28,7 +28,7 @@ body {
     right: 0;
     width: 30%; /* Ajuste conforme necessário */
     height: 100%;
-    background-image: url(/imagens/fundo.jpeg);
+    background-image: url(/imagens/fundo.jpg);
     background-size: cover;
     transform: scaleX(-1); /* Inverte a imagem */
 }
