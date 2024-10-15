@@ -1,0 +1,116 @@
+/* Reset básico de CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Faz com que o corpo ocupe toda a altura da janela */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(imagens/fundo.jpeg);
+    background-size: cover; /* Para cobrir toda a tela, ajuste conforme necessário */
+    background-repeat: repeat; /* Para repetir a imagem */
+    background-position: center; /* Centraliza a imagem */
+    margin: 0;
+    padding: 20px;
+}
+
+.clone {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%; /* Ajuste conforme necessário */
+    height: 100%;
+    background-image: url(imagens/fundo.jpeg);
+    background-size: cover;
+    transform: scaleX(-1); /* Inverte a imagem */
+}
+
+h1 {
+    color: #e9fa00;
+}
+
+#difficulty-selector {
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.anime-board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Sempre 6 colunas para 24 cartas */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #2e8b57;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.2s;
+}
+
+.card.flip {
+    background-color: #000000;
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    display: none;
+}
+
+.card.flip img {
+    display: block;
+}
+
+#confetti-canvas {
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Additional media queries for larger mobile devices */
+@media (max-width: 768px) and (min-width: 601px) {
+    .anime-board {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+
+    .card {
+        width: 90px;
+        height: 90px;
+        font-size: 30px;
+    }
+}
+
+/* Landscape orientation */
+@media (orientation: landscape) {
+    .anime-board {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .card {
+        width: 100px;
+        height: 100px;
+        font-size: 35px;
+    }
+}
